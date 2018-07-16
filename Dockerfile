@@ -22,7 +22,7 @@ wget \
 gnupg2 \
 systemd \
 locales \
-&& sed -i 's/# (en_US.UTF-8)/\1/' /etc/locale.gen \
+&& sed -i 's/\# \(en_US.UTF-8\)/\1/' /etc/locale.gen \
 && locale-gen \
 && wget -O- http://downloads.3cx.com/downloads/3cxpbx/public.key | apt-key add - \
 && echo "deb http://downloads.3cx.com/downloads/debian stretch main" | tee /etc/apt/sources.list.d/3cxpbx.list \
